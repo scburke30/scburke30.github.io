@@ -55,8 +55,12 @@ section.card.active { display: block; }
 .muted { color: var(--muted); }
 .pill { font-size: .8rem; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); }
 .icons { display: flex; gap: 10px; align-items: center; }
-.icons a { display: inline-flex; padding: 8px; border-radius: 12px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); }
+.icons a { display: inline-flex; align-items: center; justify-content: center; padding: 8px; border-radius: 12px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); text-decoration: none; }
 .icons a:hover { border-color: rgba(255,255,255,.28); transform: translateY(-1px); }
+
+/* Font Awesome icon sizing inside icon links */
+.icons i { display: inline-block; font-style: normal; font-size: 1rem; line-height: 1; width: 1em; height: 1em; vertical-align: middle; }
+.home-icons i { font-size: 1.05rem; }
 
 .edulist { display: grid; grid-template-columns: 1fr; gap: 12px; }
 .edu { display: grid; grid-template-columns: 60px 1fr; gap: 14px; align-items: center; padding: 10px; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); }

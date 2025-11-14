@@ -151,14 +151,16 @@
     if (homeIcons) {
       homeIcons.innerHTML = `
         <a href="mailto:${DATA.emails?.tech || ''}" aria-label="Tech Email" title="Contact Me">
-          <!-- Envelope / Mail SVG -->
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="license-verification.pdf" download aria-label="Nursing License Verification" title="Nursing License Verification">
+          <i class="fa-solid fa-user-nurse" aria-hidden="true"></i>
         </a>
         <a href="${DATA.social?.github || '#'}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1.01.07 1.55 1.05 1.55 1.05.9 1.58 2.37 1.12 2.95.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.76 1.05a9.22 9.22 0 0 1 5.02 0c1.92-1.32 2.76-1.05 2.76-1.05.55 1.41.21 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.95-2.34 4.81-4.57 5.07.36.32.67.94.67 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
         </a>
         <a href="${DATA.social?.instagram || '#'}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 15.8 2.8 2.8 0 0 0 12 9.2Zm5-1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
         </a>
       `;
     }
@@ -168,23 +170,16 @@
     if (contactIcons) {
       contactIcons.innerHTML = `
         <a href="mailto:${DATA.emails?.tech || ''}" aria-label="Tech Email" title="Contact Me">
-          <!-- Envelope / Mail SVG -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-          </svg>
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
         </a>
         <a href="${DATA.social?.github || '#'}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-          <!-- GitHub SVG -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1.01.07 1.55 1.05 1.55 1.05.9 1.58 2.37 1.12 2.95.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.76 1.05a9.22 9.22 0 0 1 5.02 0c1.92-1.32 2.76-1.05 2.76-1.05.55 1.41.21 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.95-2.34 4.81-4.57 5.07.36.32.67.94.67 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
-          </svg>
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="license-verification.pdf" download aria-label="Nursing License Verification" title="Nursing License Verification">
+          <i class="fa-solid fa-user-nurse" aria-hidden="true"></i>
         </a>
         <a href="${DATA.social?.instagram || '#'}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-          <!-- Instagram SVG -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 15.8 2.8 2.8 0 0 0 12 9.2Zm5-1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
-          </svg>
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
         </a>
       `;
     }
