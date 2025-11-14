@@ -1,87 +1,104 @@
 {
-  "name": "Abel Garcia",
-  "initials": "AG",
-  "tagline": "Digital Forensics & Information Technology",
-  "bio": "I am a technology-minded professional with experience across both the public and private sector in criminal investigations, cyber investigations, digital forensic extraction and examination, IT managed services, basic application development, automation scripting, and corporate forensics.\n\nIn my primary role, I am a Criminal Investigator and Task Force Officer in the State of Missouri. I conduct investigations into Internet Crimes Against Children as an affiliate and perform digital forensics on MacOS, Windows, Linux, and Mobile systems. I am trained and certified to triage devices for criminal activity and files, perform forensic extractions, and then perform subsequent examinations of those extractions. I also assist with the regional Crime Scene Investigation team in the collection of evidence for homicides, suspicious deaths, and other crimes against persons.\n\nI also work as a solutions technician with GTGweb MSP, where I work remotely to handle client support and development requests, maintain user endpoints through RMM toolsets, plan, configure, and deploy backup and disaster recovery options, and onboard clients into our systems. I currently manage the support queue for around 30 end users across our SMB clients each with their own endpoint, as well as two Meraki networking sites and just over a dozen hosted websites.",
+  "name": "Sarah Burke",
+  "initials": "SB",
+  "tagline": "RN, BSN, CCRN-CMC",
+  "bio": "My work in healthcare started long before I became a nurse. I started out as a nurse's aide at a convent near my town. The nurses there encouraged me to pursue an education in nursing. After that, I worked as a CNA and a CMT at a local nursing home. It was the hardest work I have ever done, but it was worth it. Everyday I miss the connections I made taking care of those residents every day.\n\nWhile I was working full time as a CNA, I pursued my BSN through Missouri Western State University. There I encountered some of the best nurses and educators I have ever met. I graduated with my BSN in December 2023. I was fortunate to land my dream job in a 24-bed mixed ICU.\n\nThe variety of patients is astounding. I care for pulmonary, neuro, cardiac, trauma, post-surgical, and all the patients in between. I manage the care of patients with many medical devices such as Impellas, intra-aortic balloon pump, ventriculostomies, Swan-Ganz catheters, CRRT, and ventilators. I manage the care of critically ill patients requiring ventilators, sedation, and vasoactive medications. I have assisted providers in many procedures such as arterial line insertion, bronchoscopies, intubation, and central line insertion. Additionally, I have spent my time in the ICU expanding my knowledge by obtaining my CCRN and CMC.\n\nOutside of work I enjoy running 5Ks with my grandma, watching Kansas City Chiefs games, and walking my beloved dog, Daisy. However, my favorite activity is watching Hallmark Christmas movies with my boyfriend, Abel.",
   "photo": "assets/photos/me.png",
   "emails": {
-    "tech": "abel@gtgwebmsp.com",
-    "leo": "agarcia@buchmo.gov"
+    "tech": "scbjunk30@gmail.com"
   },
   "social": {
-    "github": "https://github.com/abelss0n",
-    "instagram": "https://instagram.com/abelss0n"
+    "github": "https://github.com/scburke30",
+    "instagram": "https://instagram.com/dopeturtle30"
   },
   "education": [
-    { "title": "High School Diploma, STEM", "date": "2015", "issuer": "Stony Point High School", "badge": "assets/badges/rrisd.png", "kind": "education" },
-    { "title": "Regional Law Enforcement Academy", "date": "2022", "issuer": "Missouri Western State University", "badge": "assets/badges/mwsu.png", "kind": "education" },
-    { "title": "Class A Peace Officer", "date": "2022, Active", "issuer": "Missouri POST", "badge": "assets/badges/moleo.png", "kind": "certification" },
-    { "title": "Cellebrite Certified Operator", "date": "2024, Active", "issuer": "Cellebrite", "badge": "assets/badges/cco.png", "kind": "certification" },
-    { "title": "Cellebrite Certified Physical Analyst", "date": "2024, Active", "issuer": "Cellebrite", "badge": "assets/badges/ccpa.png", "kind": "certification" },
-    { "title": "Crime Scene Investigation School", "date": "2024, 40 Hours", "issuer": "JCSO Criminalistics Laboratory", "badge": "assets/badges/jcso.png", "kind": "training" },
-    { "title": "Dallas CAC Conference 2024", "date": "2024, 35 Hours", "issuer": "DCAC", "badge": "assets/badges/dcac.png", "kind": "training" },
-    { "title": "Advanced Digital Forensic Analysis: Windows", "date": "2024, 32 Hours", "issuer": "NW3C", "badge": "assets/badges/nw3c.png", "kind": "training" },
-    { "title": "Advanced Digital Forensic Analysis: MacOS", "date": "2024, 32 Hours", "issuer": "NW3C", "badge": "assets/badges/nw3c.png", "kind": "training" },
-    { "title": "Advanced Digital Forensic Analysis: Linux", "date": "2024, 14 Hours", "issuer": "NW3C", "badge": "assets/badges/nw3c.png", "kind": "training" },
-    { "title": "Advanced Digital Forensic Analysis: iOS & Android", "date": "2024, 32 Hours", "issuer": "NW3C", "badge": "assets/badges/nw3c.png", "kind": "training" },
-    { "title": "Cellebrite Advanced Smartphone Analysis", "date": "2025", "issuer": "Cellebrite", "badge": "assets/badges/casa.png", "kind": "certification" },
-    { "title": "A.S. Computer Science", "date": "2026", "issuer": "University of the People", "badge": "assets/badges/uop.png", "kind": "education" },
-    { "title": "Certified Professional Criminal Investigator", "date": "2025, Active", "issuer": "McAfee Institute", "badge": "assets/badges/cpci.png", "kind": "certification" },
-    { "title": "Certified Expert in Cyber Investigations", "date": "2025, Active", "issuer": "McAfee Institute", "badge": "assets/badges/ceci.png", "kind": "certification" },
-    { "title": "C|ECI and C|PCI Training", "date": "2025, 200 Hours", "issuer": "McAfee Institute", "badge": "assets/badges/mi.png", "kind": "training" }
+    { "title": "High School Diploma", "date": "2020", "issuer": "South Nodaway R-IV", "badge": "assets/badges/snriv.png", "kind": "education" },
+    { "title": "B.S. Nursing", "date": "2023", "issuer": "Missouri Western State University", "badge": "assets/badges/mwsu.png", "kind": "education" },
+    { "title": "Registered Nurse", "date": "2024, Active", "issuer": "National Council of State Boards of Nursing", "badge": "assets/badges/nwmsu.png", "kind": "Certification" },
+    { "title": "Advanced Cardiovascular Life Support", "date": "2024, Active", "issuer": "American Heart Association", "badge": "assets/badges/aha.jpg", "kind": "certification" },
+    { "title": "Trauma Nursing Core Course", "date": "2024, Active", "issuer": "Emergency Nurses Association", "badge": "assets/badges/ena.png", "kind": "certification" },
+    { "title": "Critical Care Registered Nurse", "date": "2025, Active", "issuer": "American Association of Critical-Care Nurses", "badge": "assets/badges/aacn.png", "kind": "certification" },
+    { "title": "Cardiac Medicine Subspecialty Certification", "date": "2025, Active", "issuer": "American Association of Critical-Care Nurses", "badge": "assets/badges/aacn.png", "kind": "certification" },
+    { "title": "Crisis Prevention Intervention", "date": "2024", "issuer": "Crisis Prevention Institute", "badge": "assets/badges/cpi.png", "kind": "training" },
+    { "title": "NIHSS Certification", "date": "2025, Active", "issuer": "Apex Innovations", "badge": "assets/badges/apex.png", "kind": "certification" },
+    { "title": "Continuous Kidney Replacement Therapy", "date": "2025", "issuer": "NxStage", "badge": "assets/badges/cpi.png", "kind": "training" },
+    { "title": "Intra-Aortic Balloon Pump Training", "date": "2025", "issuer": "Teleflex", "badge": "assets/badges/teleflex.png", "kind": "training" },
+    { "title": "Impella Training", "date": "2025", "issuer": "Abiomed", "badge": "assets/badges/abiomed.png", "kind": "training" },
+    { "title": "Cardiac Surgical Unit - Advanced Life Support", "date": "2025, Active", "issuer": "Cardiac Advanced Rescuscitation Education", "badge": "assets/badges/care.png", "kind": "certification" }
   ],
   "work": [
     {
-      "role": "Investigator",
-      "org": "Buchanan County Sheriff's Office",
+      "role": "RN-ICU",
+      "org": "Mosaic Life Care",
       "period": "2023 — Present",
-      "location": "Buchanan County, MO",
+      "location": "Saint Joseph, MO",
       "bullets": [
-        "Act as a regional Task Force Officer with the Northwest Missouri Cyber Crimes Task Force.",
-        "Conduct criminal investigations into internet crimes against children across multiple counties.",
-        "Conduct digital forensic examinations on mobile devices used in crimes against persons.",
-        "Conduct digital forensic examinations on desktop, laptop, mobile, and various digital and physical storage devices used in crimes against children.",
-        "Prepare legal process for the preservation, subpoena, and searches of electronic service provider data.",
-        "Maintain accurate and specific documentation and reporting on the examination of evidence and the investigation of criminal activities.",
-        "Assist with local criminal investigations involving a technical component."
+       "Managing care of critically ill patients in a mixed ICU setting.", 
+       "Managing care of patients requiring devices such as, ventilators, IABP, Impella, Ventriculostomy, CRRT.",
+       "Assessing patients, administering medications, titrating IV medications, and vasoactive drips.",
+       "Recovering patients after Open Heart Surgery",
+       "Precepting orientees",
+       "EPIC Superuser",
+       "CRRT Superuser"  
       ]
     },
     {
-      "role": "Solutions Engineer",
-      "org": "GTGweb MSP",
-      "period": "2018 — Present",
-      "location": "Round Rock, TX",
+      "role": "Staff RN",
+      "org": "Clearsky Rehab Hospital",
+      "period": "2024 — Present, PRN",
+      "location": "Elwood, KS",
       "bullets": [
-        "Manage web hosting, email, and endpoint (workstation/server) maintenance for SMB clients.",
-        "Advise on application and tool implementation, as well as created automation scripts for these tools as needed.",
-        "Develop applications and scripts as needed for existing client tools.",
-        "Conduct training of personnel as needed for onboarding, taking ownership of all technical support requests and implementations."
+        "Managing care of patients receiving intensive rehabilitation services post stroke, brain injury, spinal cord injury, orthopedic surgery, and other debilitating illnesses.",
+        "Assessing patients and administering medications as prescribed by physicians.",
+        "Documenting assessments, medication administration, and formulating care plans.",
+        "Occasional Charge Nursing."
       ]
     },
     {
-      "role": "Police Officer",
-      "org": "Maryville Public Safety",
+      "role": "Blood Donor Ambassador",
+      "org": "American Red Cross",
+      "period": "2025 — Present, Volunteer",
+      "location": "Northwest Missouri",
+      "bullets": [
+        "Assist blood donors, ensuring a positive experience.",
+        "Assist with patient check in and post-donation refreshments."
+      ]
+    },
+    {
+      "role": "Charge Nurse",
+      "org": "Nodaway Nursing Home",
+      "period": "2024",
+      "location": "Nodaway County, MO",
+      "bullets": [
+        "Delegating and overseeing care provided by CNAs during shifts.",
+        "Administering Medications and Assessing Patients.",
+        "Documenting ADLs, Vitals, Assessments, and Medication Administration."
+      ]
+    },
+    {
+      "role": "CNA Float Pool",
+      "org": "Mosaic Life Care",
       "period": "2022 — 2023",
-      "location": "Maryville, MO",
+      "location": "Saint Joseph, MO",
       "bullets": [
-        "Conducted vehicular and foot patrols of city roadways, parks, and both public and residential properties on twelve hour shifts.",
-        "Enforced state statutes and municipal ordinances within the city limits through the issuance of citations and execution of arrests/warrants.",
-        "Maintained required certifications and equipment as required by agency leadership."
+        "Assisting patients with all ADLs; including bathing, eating, and ambulating.",
+        "Taking and recording vitals and assisting nursing staff as needed.",
+        "Documenting ADLs and vitals."
+      ]
+    },
+    {
+      "role": "CNA/CMT",
+      "org": "Nodaway Nursing Home",
+      "period": "2020-2024",
+      "location": "Nodaway County, MO",
+      "bullets": [
+        "Assisting patients with all ADLs; including bathing, eating, and ambulating.",
+        "Administering Medications and documenting medication administration.",
+        "Taking and recording vitals and assisting nursing staff as needed."
       ]
     }
   ],
   "projects": [
-    {
-      "name": "Personal Website Project (2025)",
-      "url": "https://abelss0n.github.io/",
-      "description": "A simple website project that is intended to be customizable for other users and expandable over time as it suits my needs for a personal website. Created as a single page java application.",
-      "image": "assets/projects/personal_website.png"
-    },
-    {
-      "name": "Second Act RP - FiveM (2025)",
-      "url": "https://discord.gg/SCH6EFAm8C",
-      "description": "Second Act RP is a Roleplay Server for the Grand Theft Auto V, FiveM Platform. I worked on the development team to implement features/scripts, develop custom scripts and applications, and assisted with server IT operations and moderation.",
-      "image": "assets/projects/second_act_rp.jpg"
-    }
+    
   ]
 }

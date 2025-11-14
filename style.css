@@ -61,6 +61,9 @@ section.card.active { display: block; }
 .edulist { display: grid; grid-template-columns: 1fr; gap: 12px; }
 .edu { display: grid; grid-template-columns: 60px 1fr; gap: 14px; align-items: center; padding: 10px; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); }
 .edu img { width: 60px; height: 60px; object-fit: contain; border-radius: 10px; background: transparent; }
+
+/* When there is no badge image, allow the content to use the full width */
+.edu.no-badge { grid-template-columns: 1fr; }
 .edu h4 { margin: 0; }
 .edu p { margin: 4px 0 0; color: var(--muted); }
 .edugroup {
@@ -160,7 +163,7 @@ footer { text-align: center; color: var(--muted); margin: 24px 0 12px; font-size
 .proj-link:hover { border-color: rgba(255,255,255,.28); transform: translateY(-1px); }
 
 /* Load Aurebesh */
-@font-face {
+/*@font-face {
   font-family: 'Aurebesh';
   src:
     url('assets/fonts/Aurebesh.woff2') format('woff2'),
@@ -169,7 +172,7 @@ footer { text-align: center; color: var(--muted); margin: 24px 0 12px; font-size
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+}*/
 
 /* Name crossfade stack */
 .name-stack {

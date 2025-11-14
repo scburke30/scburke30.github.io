@@ -28,11 +28,15 @@
     if (!root || !countEl) return;
 
     root.innerHTML = '';
+  // Hide badges site-wide (no badge images will be rendered)
+  const showBadge = false;
     (items || []).forEach(item => {
       const div = document.createElement('div');
       div.className = 'edu';
+      // Mark entries where no badge is shown so CSS can make them span full width
+      if (!showBadge) div.classList.add('no-badge');
       div.innerHTML = `
-        <img src="${item.badge}" alt="${item.title} badge" />
+        ${showBadge && item.badge ? `<img src="${item.badge}" alt="${item.title} badge" />` : ``}
         <div>
           <h4>${item.title}</h4>
           <p>${item.date || ''}</p>
@@ -137,20 +141,18 @@
     // --- Home hero content ---
     const homeTitle = document.getElementById('home-title');
     const homeSubtitle = document.getElementById('home-subtitle');
-    if (homeTitle)  homeTitle.textContent = `Howdy, I am ${DATA.name || 'Abel Garcia'}.`;
+    if (homeTitle)  homeTitle.textContent = `Howdy, I am ${DATA.name || 'Sarah Burke'}.`;
     if (homeSubtitle) {
-      homeSubtitle.textContent = "Criminal Investigator | Digital Forensic Technician | Hobby Developer | Star Wars Fan.";
+      homeSubtitle.textContent = "Registered Nurse | Critical Care Nurse | Patient Advocate | AACN Member | Lifelong Learner";
     }
 
     // --- Home icons (reuse same markup as contact icons) ---
     const homeIcons = document.getElementById('home-icons');
     if (homeIcons) {
       homeIcons.innerHTML = `
-        <a href="mailto:${DATA.emails?.tech || ''}" aria-label="Tech Email" title="Tech Email: ${DATA.emails?.tech || ''}">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10h-2V5H5v10H3V5Zm-1 12h20v2H2v-2Z"/></svg>
-        </a>
-        <a href="mailto:${DATA.emails?.leo || ''}" aria-label="LEO Email" title="LEO Email: ${DATA.emails?.leo || ''}">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5.25 3.5 10.74 8 12 4.5-1.26 8-6.75 8-12V5l-8-3Zm0 2.18L18 6v4.82c0 4.18-2.79 8.57-6 9.9-3.21-1.33-6-5.72-6-9.9V6l6-1.82Z"/></svg>
+        <a href="mailto:${DATA.emails?.tech || ''}" aria-label="Tech Email" title="Contact Me">
+          <!-- Envelope / Mail SVG -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
         </a>
         <a href="${DATA.social?.github || '#'}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1.01.07 1.55 1.05 1.55 1.05.9 1.58 2.37 1.12 2.95.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.76 1.05a9.22 9.22 0 0 1 5.02 0c1.92-1.32 2.76-1.05 2.76-1.05.55 1.41.21 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.95-2.34 4.81-4.57 5.07.36.32.67.94.67 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
@@ -165,18 +167,11 @@
     // Contact icons with hover tooltips
     if (contactIcons) {
       contactIcons.innerHTML = `
-        <a href="mailto:${DATA.emails?.tech || ''}" aria-label="Tech Email" title="Tech Email: ${DATA.emails?.tech || ''}">
-          <!-- Laptop SVG -->
+        <a href="mailto:${DATA.emails?.tech || ''}" aria-label="Tech Email" title="Contact Me">
+          <!-- Envelope / Mail SVG -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10h-2V5H5v10H3V5Zm-1 12h20v2H2v-2Z"/>
-          </svg>
-        </a>
-        <a href="mailto:${DATA.emails?.leo || ''}" aria-label="LEO Email" title="LEO Email: ${DATA.emails?.leo || ''}">
-          <!-- Shield/Badge SVG -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill="currentColor" d="M12 2 4 5v6c0 5.25 3.5 10.74 8 12 4.5-1.26 8-6.75 8-12V5l-8-3Zm0 2.18L18 6v4.82c0 4.18-2.79 8.57-6 9.9-3.21-1.33-6-5.72-6-9.9V6l6-1.82Z"/>
+            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
           </svg>
         </a>
         <a href="${DATA.social?.github || '#'}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
