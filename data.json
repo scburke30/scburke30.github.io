@@ -1,8 +1,8 @@
 {
   "name": "Sarah Burke",
   "initials": "SB",
-  "tagline": "RN, BSN, CCRN-CMC",
-  "bio": "My work in healthcare started long before I became a nurse. I started out as a nurse's aide at a convent near my town. The nurses there encouraged me to pursue an education in nursing. After that, I worked as a CNA and a CMT at a local nursing home. It was the hardest work I have ever done, but it was worth it. Everyday I miss the connections I made taking care of those residents every day.\n\nWhile I was working full time as a CNA, I pursued my BSN through Missouri Western State University. There I encountered some of the best nurses and educators I have ever met. I graduated with my BSN in December 2023. I was fortunate to land my dream job in a 24-bed mixed ICU.\n\nThe variety of patients is astounding. I care for pulmonary, neuro, cardiac, trauma, post-surgical, and all the patients in between. I manage the care of patients with many medical devices such as Impellas, intra-aortic balloon pump, ventriculostomies, Swan-Ganz catheters, CRRT, and ventilators. I manage the care of critically ill patients requiring ventilators, sedation, and vasoactive medications. I have assisted providers in many procedures such as arterial line insertion, bronchoscopies, intubation, and central line insertion. Additionally, I have spent my time in the ICU expanding my knowledge by obtaining my CCRN and CMC.\n\nOutside of work I enjoy running 5Ks with my grandma, watching Kansas City Chiefs games, and walking my beloved dog, Daisy. However, my favorite activity is watching Hallmark Christmas movies with my boyfriend, Abel.",
+  "tagline": "RN, BSN, CCRN-CMC-CSC",
+  "bio": "My work in healthcare started long before I became a nurse. I started out as a nurse's aide at a convent near my town. The nurses there encouraged me to pursue an education in nursing. After that, I worked as a CNA and a CMT at a local nursing home. It was the hardest work I have ever done, but it was worth it. Everyday I miss the connections I made taking care of those residents every day.\n\nWhile I was working full time as a CNA, I pursued my BSN through Missouri Western State University. There I encountered some of the best nurses and educators I have ever met. I graduated with my BSN in December 2023. I was fortunate to land my dream job in a 24-bed mixed ICU.\n\nThe variety of patients is astounding. I care for pulmonary, neuro, cardiac, trauma, post-surgical, and all the patients in between. I manage the care of patients with many medical devices such as Impellas, intra-aortic balloon pump, ventriculostomies, Swan-Ganz catheters, CRRT, and ventilators. I manage the care of critically ill patients requiring ventilators, sedation, and vasoactive medications. I have assisted providers in many procedures such as arterial line insertion, bronchoscopies, intubation, and central line insertion. Additionally, I have spent my time in the ICU expanding my knowledge by obtaining my CCRN, CMC, and CSC.\n\nOutside of work I enjoy running 5Ks with my grandma, watching Kansas City Chiefs games, and walking my beloved dog, Daisetha Mochi Garcia-Burke. However, my favorite activity is watching Hallmark Christmas movies with my fiancé, Abel.",
   "photo": "assets/photos/me.png",
   "emails": {
     "tech": "scbjunk30@gmail.com"
@@ -24,7 +24,12 @@
     { "title": "Continuous Kidney Replacement Therapy", "date": "2025", "issuer": "NxStage", "badge": "assets/badges/cpi.png", "kind": "training" },
     { "title": "Intra-Aortic Balloon Pump Training", "date": "2025", "issuer": "Teleflex", "badge": "assets/badges/teleflex.png", "kind": "training" },
     { "title": "Impella Training", "date": "2025", "issuer": "Abiomed", "badge": "assets/badges/abiomed.png", "kind": "training" },
-    { "title": "Cardiac Surgical Unit - Advanced Life Support", "date": "2025, Active", "issuer": "Cardiac Advanced Rescuscitation Education", "badge": "assets/badges/care.png", "kind": "certification" }
+    { "title": "Cardiac Surgical Unit - Advanced Life Support", "date": "2025, Active", "issuer": "Cardiac Advanced Rescuscitation Education", "badge": "assets/badges/care.png", "kind": "certification" },
+    { "title": "Operation S.T.I.C.K. Training", "date": "2025", "issuer": "Mosaic Life Care", "badge": "assets/badges/mosaic.png", "kind": "training" },
+    { "title": "Adult Cardiac Surgery Nursing", "date": "2026, Active", "issuer": "American Association of Critical-Care Nurses", "badge": "assets/badges/aacn.png", "kind": "certification" },
+    { "title": "Fundamentals of PICC Course", "date": "2026", "issuer": "BD Medical Systems", "badge": "assets/badges/bd.png", "kind": "training" },
+    { "title": "Fundamentals of Midline Vascular Access Catheters Course", "date": "2026", "issuer": "BD Medical Systems", "badge": "assets/badges/bd.png", "kind": "training" },
+    { "title": "Fundamentals of Ultrasound for Vascular Access Placement", "date": "2026", "issuer": "BD Medical Systems", "badge": "assets/badges/bd.png", "kind": "training" }
   ],
   "work": [
     {
@@ -35,17 +40,30 @@
       "bullets": [
        "Managing care of critically ill patients in a mixed ICU setting.", 
        "Managing care of patients requiring devices such as, ventilators, IABP, Impella, Ventriculostomy, CRRT.",
+       "Monitoring hemodynamics and advanced clinical decision making for patients on vasoactive drips.",
        "Assessing patients, administering medications, titrating IV medications, and vasoactive drips.",
        "Recovering patients after Open Heart Surgery",
        "Precepting orientees",
        "EPIC Superuser",
-       "CRRT Superuser"  
+       "CRRT Superuser",
+       "CLABSI Committee Member"
+      ]
+    },
+    {
+      "role": "RN-VASCULAR ACCESS",
+      "org": "Mosaic Life Care",
+      "period": "2026 — Present, PRN",
+      "location": "Saint Joseph, MO",
+      "bullets": [
+       "Utilizing ultrasound technology to place IVs, PICCs, and Midlines in patients of all ages and acuity levels.", 
+       "Sterile central line dressing changes and maintenance.",
+       "CLABSI bundle auditing and education."
       ]
     },
     {
       "role": "Staff RN",
       "org": "Clearsky Rehab Hospital",
-      "period": "2024 — Present, PRN",
+      "period": "2024 — 2026, PRN",
       "location": "Elwood, KS",
       "bullets": [
         "Managing care of patients receiving intensive rehabilitation services post stroke, brain injury, spinal cord injury, orthopedic surgery, and other debilitating illnesses.",

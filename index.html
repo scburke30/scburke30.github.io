@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarah Burke</title>
-  <meta name="description" content="Abel Garcia - Personal Resume Website" />
+  <meta name="description" content="Sarah Burke - Personal Resume Website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,13 +17,13 @@
     <!-- Header / Brand + Nav -->
     <header class="card" role="banner">
       <div class="brand">
-        <div class="avatar" aria-hidden="true" id="initials">AG</div>
+        <div class="avatar" aria-hidden="true" id="initials">SB</div>
         <div class="title">
           <h1 class="name-stack" aria-label="Your Name">
-            <span class="face face-normal" id="name-normal">Your Name</span>
-            <span class="face face-aurebesh" id="name-aurebesh" aria-hidden="true">Your Name</span>
+            <span class="face face-normal" id="name-normal">Sarah Burke</span>
+            <span class="face face-aurebesh" id="name-aurebesh" aria-hidden="true">Sarah Burke</span>
           </h1>
-          <p><span class="muted" id="tagline">RN, BSN, CCRN-CMC</span></p>
+          <p><span class="muted" id="tagline">RN, BSN, CCRN-CMC-CSC</span></p>
         </div>
       </div>
       <nav class="nav" aria-label="Primary">
@@ -41,13 +41,26 @@
       <section id="home" class="card" aria-labelledby="home-h">
         <div class="hero">
           <h2 id="home-h" class="visually-hidden">Home</h2>
-          <h1 id="home-title" class="home-title">Howdy, I am Sarah Burke.</h1>
+          <h1 id="home-title" class="home-title">Hello, I am Sarah Burke.</h1>
           <h2 id="home-subtitle" class="home-subtitle">
             Registered Nurse | Critical Care Nurse | Patient Advocate | AACN Member | Lifelong Learner
           </h2>
 
           <!-- Icons row (same style as other icons, no "Contact" header) -->
           <div class="icons home-icons" id="home-icons" aria-label="Quick contact links"></div>
+
+          <!-- Front-page rotating gallery (auto-populated by app.js) -->
+          <h3 class="visually-hidden" id="frontpage-gallery-h">Photo gallery</h3>
+          <div
+            id="frontpage-gallery"
+            class="frontpage-gallery"
+            aria-labelledby="frontpage-gallery-h"
+            hidden
+          >
+            <div class="frontpage-gallery__frame">
+              <img id="frontpage-gallery-img" class="frontpage-gallery__img" alt="" loading="lazy" decoding="async" />
+            </div>
+          </div>
 
           <!-- Aurebesh line -->
           <!-- <p class="home-aurebesh">May The Force Be With You, Always</p> --> 

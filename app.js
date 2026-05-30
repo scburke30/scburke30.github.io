@@ -13,6 +13,148 @@
     }
   }
 
+  async function loadFrontpageManifest(
+    url = new URL('assets/photos/frontpage-pics/manifest.json', document.baseURI)
+  ) {
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  }
+
+  async function loadFrontpagePicsFromGitHub() {
+    try {
+      const host = window.location.hostname || '';
+      if (!host.endsWith('.github.io')) return null;
+
+      const owner = host.split('.')[0];
+      const repo = `${owner}.github.io`;
+      const path = 'assets/photos/frontpage-pics';
+      const basePath = `${path}/`;
+
+      const tryRef = async (ref) => {
+        const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${ref}`;
+        const res = await fetch(url, {
+          headers: { Accept: 'application/vnd.github+json' },
+          cache: 'no-store',
+        });
+        if (!res.ok) return null;
+        return await res.json();
+      };
+
+      const listing = (await tryRef('main')) || (await tryRef('master'));
+      if (!Array.isArray(listing)) return null;
+
+      const isImage = (name) => /\.(jpe?g|png|gif|webp|avif)$/i.test(String(name));
+      const images = listing
+        .filter((x) => x && x.type === 'file' && isImage(x.name))
+        .map((x) => ({ file: x.name, alt: humanizeFilename(x.name) }));
+
+      return { basePath, images };
+    } catch {
+      return null;
+    }
+  }
+
+  function humanizeFilename(fileName = '') {
+    const base = String(fileName).split('/').pop() || '';
+    const noExt = base.replace(/\.[^.]+$/, '');
+    const cleaned = noExt.replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim();
+    if (!cleaned) return 'Photo';
+    return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+  }
+
+  let frontpageGalleryInterval = null;
+  let frontpageGalleryFadeTimeout = null;
+
+  function renderFrontpageGallery(manifest) {
+    const root = document.getElementById('frontpage-gallery');
+    const imgEl = document.getElementById('frontpage-gallery-img');
+    if (!root || !imgEl) return;
+
+    const frameEl = root.querySelector('.frontpage-gallery__frame');
+
+    const basePath = manifest?.basePath || 'assets/photos/frontpage-pics/';
+
+    let images = manifest?.images;
+    if (Array.isArray(manifest)) images = manifest;
+
+    const normalized = (Array.isArray(images) ? images : [])
+      .map((img) => {
+        if (typeof img === 'string') {
+          return { src: basePath + img, alt: humanizeFilename(img) };
+        }
+        const file = img?.file || img?.src;
+        if (!file) return null;
+        const src = String(file).includes('://') || String(file).startsWith('/')
+          ? String(file)
+          : basePath + String(file);
+        return {
+          src,
+          alt: img?.alt || humanizeFilename(file),
+        };
+      })
+      .filter(Boolean);
+
+    // Clear any previous rotation timers (in case this gets called twice)
+    if (frontpageGalleryInterval) {
+      window.clearInterval(frontpageGalleryInterval);
+      frontpageGalleryInterval = null;
+    }
+    if (frontpageGalleryFadeTimeout) {
+      window.clearTimeout(frontpageGalleryFadeTimeout);
+      frontpageGalleryFadeTimeout = null;
+    }
+
+    if (!normalized.length) {
+      root.hidden = true;
+      imgEl.classList.remove('is-fading');
+      imgEl.removeAttribute('src');
+      imgEl.alt = '';
+      return;
+    }
+
+    root.hidden = false;
+
+    let index = 0;
+    const show = (i) => {
+      const item = normalized[i];
+      if (!item) return;
+
+      imgEl.onload = () => {
+        if (!frameEl) return;
+        const w = imgEl.naturalWidth;
+        const h = imgEl.naturalHeight;
+        if (w && h) frameEl.style.setProperty('--frontpage-gallery-ar', `${w} / ${h}`);
+      };
+      imgEl.src = item.src;
+      imgEl.alt = item.alt || 'Photo';
+    };
+
+    show(index);
+
+    // If there's only one image (or user prefers reduced motion), don't auto-rotate.
+    const reduceMotion =
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (normalized.length < 2 || reduceMotion) return;
+
+    const rotateMs = 5000;
+    const fadeMs = 260;
+
+    frontpageGalleryInterval = window.setInterval(() => {
+      imgEl.classList.add('is-fading');
+      frontpageGalleryFadeTimeout = window.setTimeout(() => {
+        index = (index + 1) % normalized.length;
+        show(index);
+        imgEl.classList.remove('is-fading');
+      }, fadeMs);
+    }, rotateMs);
+  }
+
   function showLoadError(err) {
     const bioEl = $('#bio');
     if (bioEl) {
@@ -141,7 +283,7 @@
     // --- Home hero content ---
     const homeTitle = document.getElementById('home-title');
     const homeSubtitle = document.getElementById('home-subtitle');
-    if (homeTitle)  homeTitle.textContent = `Howdy, I am ${DATA.name || 'Sarah Burke'}.`;
+    if (homeTitle)  homeTitle.textContent = `Hello, I am ${DATA.name || 'Sarah Burke'}.`;
     if (homeSubtitle) {
       homeSubtitle.textContent = "Registered Nurse | Critical Care Nurse | Patient Advocate | AACN Member | Lifelong Learner";
     }
@@ -238,6 +380,13 @@
       hydrate(data);
     } catch (e) {
       showLoadError(e);
+    }
+
+    try {
+      const collageManifest = (await loadFrontpageManifest()) || (await loadFrontpagePicsFromGitHub());
+      renderFrontpageGallery(collageManifest);
+    } catch {
+      // ignore
     } finally {
       wireTabs();
       setActive('home');

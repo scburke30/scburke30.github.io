@@ -1,0 +1,33 @@
+{
+    "basePath":  "assets/photos/frontpage-pics/",
+    "images":  [
+                   {
+                       "file":  "sarah-picc.png",
+                       "alt":  "Sarah picc"
+                   },
+                   {
+                       "file":  "daisy-xmas.jpg",
+                       "alt":  "Daisy xmas"
+                   },
+                   {
+                       "file":  "sarah-abel.jpg",
+                       "alt":  "Sarah abel"
+                   },
+                   {
+                       "file":  "sarah-abel2.jpg",
+                       "alt":  "Sarah abel2"
+                   },
+                   {
+                       "file":  "sarah-daisy.jpg",
+                       "alt":  "Sarah daisy"
+                   },
+                   {
+                       "file":  "sarah-gma.jpg",
+                       "alt":  "Sarah gma"
+                   },
+                   {
+                       "file":  "daisy-tree.JPG",
+                       "alt":  "Daisy tree"
+                   }
+               ]
+}
